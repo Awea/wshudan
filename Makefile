@@ -1,7 +1,6 @@
 PREACT_CLI := $(PWD)/node_modules/.bin/preact
 
 .PHONY: deps
-## Install dependencies
 deps: node_modules
 
 node_modules: package.json yarn.lock
@@ -9,13 +8,13 @@ node_modules: package.json yarn.lock
 	@touch $@
 
 .DEFAULT_GOAL := serve
-.PHONY: serve
 ## Serve site at http://localhost:3000 with hot reloading
+.PHONY: serve
 serve: deps
 	@$(PREACT_CLI) watch -p 3000
 
-.PHONY: build
 ## Build site for production use
+.PHONY: build
 build: deps
 	@$(PREACT_CLI) build --dest site
 
@@ -27,11 +26,10 @@ define title
 \033[38;2;255;204;102m$(1)\033[0m\n
 endef
 
-.PHONY: help
 ## List available commands
+.PHONY: help
 help:
 	@printf "$(call primary,wshudan)\n"
-	@printf "Web Shudan\n\n"
 	@printf "$(call title,USAGE)"
 	@printf "    make <SUBCOMMAND>\n\n"
 	@printf "$(call title,SUBCOMMANDS)"
