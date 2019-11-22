@@ -5,8 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "preact": "^10.0.1",
-    "preact-render-to-string": "^5.1.0",
-    "preact-router": "^3.0.0"
+    "preact-render-to-string": "^5.1.0"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
