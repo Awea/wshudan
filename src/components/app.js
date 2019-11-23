@@ -60,6 +60,19 @@ export default class App extends Component {
         }
 			},
     ),
+    // following buttons are here to show how to add elements that would interact with the goban
+    h('button', {
+      type: 'button',
+      onClick: evt => {
+          this.setState(s => ({vertexSize: Math.max(s.vertexSize - 4, 4)}))
+      }
+    }, '-'),
+    h('button', {
+      type: 'button',
+      onClick: evt => {
+          this.setState(s => ({vertexSize: Math.max(s.vertexSize + 4, 4)}))
+      }
+    }, '+'),
 
 		);
 	}
