@@ -37,6 +37,8 @@ const signMap = [
 
 const board = new Board(signMap)
 
+
+
 export default class App extends Component {
    constructor(props) {
         super(props)
@@ -47,7 +49,50 @@ export default class App extends Component {
             move : 0,
         }
     }
+  movePrevious(){
+    var node = tree.get(this.state.move)
+    if (node == null){
+      return
+    }
+    if (node.data.B != null) {
+      var vertex = sgf.parseVertex(node.data.B[0])
+      var sign = 1
+    }
+    else if (node.data.W != null) {
+      var vertex = sgf.parseVertex(node.data.W[0])
+      var sign = -1
+    }
+    else{
+      return
+    }
+    let newBoard = this.state.board.set(vertex, 0)
+    this.setState({board: newBoard})
+    this.setState({move: this.state.move - 1})
 
+  }
+
+  moveNext(){
+    var newmove = this.state.move + 1
+    var node = tree.get(newmove)
+    if (node == null){
+      return
+    }
+    if (node.data.B != null) {
+      var vertex = sgf.parseVertex(node.data.B[0])
+      var sign = 1
+    }
+    else if (node.data.W != null) {
+      var vertex = sgf.parseVertex(node.data.W[0])
+      var sign = -1
+    }
+    else{
+      return
+    }
+    let newBoard = this.state.board.makeMove(sign, vertex)
+    this.setState({board: newBoard})
+    this.setState({move: newmove})
+
+  }
 	render() {
 		return h('div', {},
 			h(Goban, {
@@ -77,49 +122,13 @@ export default class App extends Component {
     h('button', {
       type: 'button',
       onClick: evt => {
-        var node = tree.get(this.state.move)
-        if (node == null){
-          return
-        }
-        if (node.data.B != null) {
-          var vertex = sgf.parseVertex(node.data.B[0])
-          var sign = 1
-        }
-        else if (node.data.W != null) {
-          var vertex = sgf.parseVertex(node.data.W[0])
-          var sign = -1
-        }
-        else{
-          return
-        }
-        let newBoard = this.state.board.set(vertex, 0)
-        this.setState({board: newBoard})
-        this.setState({move: this.state.move - 1})
-
+        this.movePrevious()
       }
     }, '<'),
     h('button', {
       type: 'button',
       onClick: evt => {
-        var newmove = this.state.move + 1
-        var node = tree.get(newmove)
-        if (node == null){
-          return
-        }
-        if (node.data.B != null) {
-          var vertex = sgf.parseVertex(node.data.B[0])
-          var sign = 1
-        }
-        else if (node.data.W != null) {
-          var vertex = sgf.parseVertex(node.data.W[0])
-          var sign = -1
-        }
-        else{
-          return
-        }
-        let newBoard = this.state.board.makeMove(sign, vertex)
-        this.setState({board: newBoard})
-        this.setState({move: newmove})
+        this.moveNext()
 
       }
     }, '>'),
