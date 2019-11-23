@@ -6,7 +6,7 @@
   "dependencies": {
     "@sabaki/go-board": "^1.0.0",
     "@sabaki/immutable-gametree": "^1.8.2",
-    "@sabaki/sgf": "^3.4.1",
+    "@sabaki/sgf": "^3.4.2",
     "@sabaki/shudan": "^1.5.2",
     "preact": "^10.0.1",
     "preact-render-to-string": "^5.1.0"
