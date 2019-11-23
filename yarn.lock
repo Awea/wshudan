@@ -787,6 +787,24 @@
   dependencies:
     loader-utils "^1.1.0"
 
+"@sabaki/go-board@^1.0.0":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@sabaki/go-board/-/go-board-1.4.1.tgz#3d069449f74fb8da98d450f555f5dc30907f4101"
+  integrity sha512-HrP3X6fvGZJ2U056Y+YZBULAz0yth268ZzbBwnvSjc0WXM1b5HcNa0w52SiOdkAdWdyFYWpR91Xk+ukCgRNp7A==
+
+"@sabaki/immutable-gametree@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@sabaki/immutable-gametree/-/immutable-gametree-1.8.2.tgz#cfb4d6df63fc5e2b6e093104d6ff824bc1efd5e9"
+  integrity sha512-ZABi5kY8XqjEAAVHr23C/CAg2sg/QqcVea/zo0MdWadkIprIhS6eXw0tZhW7DMjcn5M4ONzlelzxY4RXzpGCjQ==
+
+"@sabaki/sgf@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@sabaki/sgf/-/sgf-3.4.1.tgz#2a60f3521c4eb6f669116a07a1a9b248936962b6"
+  integrity sha512-mWRqzkDW5G7iLo9Mmw98KDrKw9jWx2ZBY4sHd2acMJf6batfOMjKgq1BuVI2ytipC1gW43N0wd18ZMqzH4lW0A==
+  optionalDependencies:
+    iconv-lite "0.4.x"
+    jschardet ">=1.0 <3"
+
 "@sabaki/shudan@^1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@sabaki/shudan/-/shudan-1.5.2.tgz#c8c953e1457f924f90799f9e114b0bf7a1e4fcac"
@@ -3982,7 +4000,7 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
-iconv-lite@0.4.24, iconv-lite@^0.4.4:
+iconv-lite@0.4.24, iconv-lite@0.4.x, iconv-lite@^0.4.4:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
@@ -4512,6 +4530,11 @@ jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
   integrity sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
+
+"jschardet@>=1.0 <3":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-2.1.1.tgz#af6f8fd0b3b0f5d46a8fd9614a4fce490575c184"
+  integrity sha512-pA5qG9Zwm8CBpGlK/lo2GE9jPxwqRgMV7Lzc/1iaPccw6v4Rhj8Zg2BTyrdmHmxlJojnbLupLeRnaPLsq03x6Q==
 
 jsdom@^12.0.0:
   version "12.2.0"
