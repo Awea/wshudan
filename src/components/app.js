@@ -47,10 +47,15 @@ export default class App extends Component {
             board: new Board(signMap),
             vertexSize: 24,
             move : 0,
+            tree: tree,
         }
     }
-  movePrevious(){
-    var node = tree.get(this.state.move)
+
+  playMove(n, cancel=false){
+    // play the move number n.
+    // if cancel is true, we cancel the said move
+    // update state board and move
+    var node = this.state.tree.get(n)
     if (node == null){
       return
     }
@@ -65,34 +70,27 @@ export default class App extends Component {
     else{
       return
     }
-    let newBoard = this.state.board.set(vertex, 0)
-    this.setState({board: newBoard})
-    this.setState({move: this.state.move - 1})
+    if (cancel) {
+      var newBoard = this.state.board.set(vertex, 0)
+      this.setState({move: n - 1})
+    }
+    else {
+      var newBoard = this.state.board.makeMove(sign, vertex)
+      this.setState({move: n})
+    }
 
+    this.setState({board: newBoard})
+  }
+
+  movePrevious(){
+    this.playMove(this.state.move, true)
   }
 
   moveNext(){
-    var newmove = this.state.move + 1
-    var node = tree.get(newmove)
-    if (node == null){
-      return
-    }
-    if (node.data.B != null) {
-      var vertex = sgf.parseVertex(node.data.B[0])
-      var sign = 1
-    }
-    else if (node.data.W != null) {
-      var vertex = sgf.parseVertex(node.data.W[0])
-      var sign = -1
-    }
-    else{
-      return
-    }
-    let newBoard = this.state.board.makeMove(sign, vertex)
-    this.setState({board: newBoard})
-    this.setState({move: newmove})
-
+    this.playMove(this.state.move + 1)
   }
+
+
 	render() {
 		return h('div', {},
 			h(Goban, {
@@ -132,8 +130,8 @@ export default class App extends Component {
 
       }
     }, '>'),
-    h('span',{},this.state.move)
 
+    h('span',{},this.state.move)
 
 		);
 	}
