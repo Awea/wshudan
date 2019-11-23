@@ -1,6 +1,6 @@
 {
-  "name": "foo",
-  "short_name": "foo",
+  "name": "wshudan",
+  "short_name": "wshudan",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
