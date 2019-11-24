@@ -28,3 +28,18 @@ Install dependencies:`npm install`
 Run the server: `make serve`
 
 You can also build the js bundle with `make build`
+
+## TODOS
+
+- [x] Basic setup using shudan, sgf, go-board, immutable-gametree libraries.
+- [x] Next/previous buttons.
+- [x] Move counter.
+- [x] Comment box.
+- [ ] Capture counter.
+- [ ] Game infos box: players, ranks, rules.
+- [ ] UI, css: style different components and arrange them in a fancy layout.
+- [ ] Load the widget on a html attribute such as `<div data-wshudan="game.sgf"></div>`.
+- [ ] Set up options and API to define max-width, starting move number, UI configuration.
+- [ ] Game tree component.
+- [ ] Make sure we can render multiple widget on the same page without any conflicts.
+- [ ] Create an "edit" mode.
