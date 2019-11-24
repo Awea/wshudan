@@ -7,7 +7,7 @@ const GameTree = require('@sabaki/immutable-gametree')
 import style from '@sabaki/shudan/css/goban.css';
 
 // According to the tests found in https://github.com/SabakiHQ/sgf/blob/master/tests/parse.test.js the following should works but it produce a JS error - @awea 20191123
-let rootNodes = sgf.parse('(;B[aa]SZ[19];B[dp];W[pq];B[dd];W[qc];B[qo];B[ch];W[cq];B[cp];W[dq];B[eq];W[er])')
+let rootNodes = sgf.parse('(;B[aa]SZ[19];B[dp];W[pq]C[somecomments on move 2];B[dd];W[qc]C[somecomments on move 4];B[qo];B[ch];W[cq];B[cp];W[dq];B[eq];W[er])')
 let gameTrees = rootNodes.map(rootNode => {
     return new GameTree({root: rootNode})
 })
@@ -38,7 +38,6 @@ const signMap = [
 const board = new Board(signMap)
 
 
-
 export default class App extends Component {
    constructor(props) {
         super(props)
@@ -48,17 +47,33 @@ export default class App extends Component {
             vertexSize: 24,
             move : 0,
             tree: tree,
+            comment: "",
         }
     }
 
-  playMove(n, cancel=false){
-    // play the move number n.
-    // if cancel is true, we cancel the said move
-    // update state board and move
+  updateComment(n){
+    // update comment for move n
     var node = this.state.tree.get(n)
     if (node == null){
       return
     }
+    if (node.data.C != null) {
+      this.setState({comment: node.data.C})
+    }
+    else{
+      this.setState({comment: ""})
+    }
+  }
+
+  playMove(n, cancel=false){
+    // play the move number n.
+    // if cancel is true, we cancel the said move
+    // update state board, move and comment
+    var node = this.state.tree.get(n)
+    if (node == null){
+      return
+    }
+    // play move
     if (node.data.B != null) {
       var vertex = sgf.parseVertex(node.data.B[0])
       var sign = 1
@@ -73,10 +88,13 @@ export default class App extends Component {
     if (cancel) {
       var newBoard = this.state.board.set(vertex, 0)
       this.setState({move: n - 1})
+      this.updateComment(n - 1)
     }
     else {
       var newBoard = this.state.board.makeMove(sign, vertex)
       this.setState({move: n})
+      this.updateComment(n)
+
     }
 
     this.setState({board: newBoard})
@@ -131,7 +149,8 @@ export default class App extends Component {
       }
     }, '>'),
 
-    h('span',{},this.state.move)
+    h('span',{},this.state.move),
+    h('span',{},this.state.comment)
 
 		);
 	}
