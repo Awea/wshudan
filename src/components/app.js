@@ -37,6 +37,19 @@ const signMap = [
 
 const board = new Board(signMap)
 
+class Commentbox extends Component {
+  render(){
+    return (<div>{this.props.comment}</div>)
+  }
+}
+
+class MoveNumberbox extends Component{
+  render(){
+    return (<div>{this.props.moveNumber}</div>)
+  }
+}
+
+
 
 export default class App extends Component {
    constructor(props) {
@@ -148,9 +161,9 @@ export default class App extends Component {
 
       }
     }, '>'),
+    <MoveNumberbox moveNumber={this.state.move}/>,
 
-    h('span',{},this.state.move),
-    h('span',{},this.state.comment)
+    <Commentbox comment={this.state.comment}/>,
 
 		);
 	}
