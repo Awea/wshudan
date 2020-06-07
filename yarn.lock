@@ -797,10 +797,12 @@
   resolved "https://registry.yarnpkg.com/@sabaki/immutable-gametree/-/immutable-gametree-1.8.2.tgz#cfb4d6df63fc5e2b6e093104d6ff824bc1efd5e9"
   integrity sha512-ZABi5kY8XqjEAAVHr23C/CAg2sg/QqcVea/zo0MdWadkIprIhS6eXw0tZhW7DMjcn5M4ONzlelzxY4RXzpGCjQ==
 
-"@sabaki/sgf@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@sabaki/sgf/-/sgf-3.4.1.tgz#2a60f3521c4eb6f669116a07a1a9b248936962b6"
-  integrity sha512-mWRqzkDW5G7iLo9Mmw98KDrKw9jWx2ZBY4sHd2acMJf6batfOMjKgq1BuVI2ytipC1gW43N0wd18ZMqzH4lW0A==
+"@sabaki/sgf@^3.4.2":
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/@sabaki/sgf/-/sgf-3.4.7.tgz#aacc27e788afe052c20034b971bae7014c733dd2"
+  integrity sha512-513CQMEejYVqaIKWK+P3AL1TXv2cqdUVOI+3mJDGcDEw5fWlz8puEYn+aQrGjnxJrn5XUUX0fefndEJbam65Sw==
+  dependencies:
+    doken "^1.0.0"
   optionalDependencies:
     iconv-lite "0.4.x"
     jschardet ">=1.0 <3"
@@ -2796,6 +2798,11 @@ dns-txt@^2.0.2:
   integrity sha1-uR2Ab10nGI5Ks+fRB9iBocxGQrY=
   dependencies:
     buffer-indexof "^1.0.0"
+
+doken@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/doken/-/doken-1.0.1.tgz#1a19dce5e917061d105db4b56a90df9a8861e3e8"
+  integrity sha512-BnrhARELKa4YTGLxb7bsmqkw8jNjDWt47gORjej2q8hwiyNZWgK5oNUQdI4Vy+VhS2Q2YHOLUStbmh+4eo5MsA==
 
 dom-converter@^0.2:
   version "0.2.0"
@@ -8310,9 +8317,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
-  integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.5:
   version "1.0.5"
