@@ -797,10 +797,12 @@
   resolved "https://registry.yarnpkg.com/@sabaki/immutable-gametree/-/immutable-gametree-1.8.2.tgz#cfb4d6df63fc5e2b6e093104d6ff824bc1efd5e9"
   integrity sha512-ZABi5kY8XqjEAAVHr23C/CAg2sg/QqcVea/zo0MdWadkIprIhS6eXw0tZhW7DMjcn5M4ONzlelzxY4RXzpGCjQ==
 
-"@sabaki/sgf@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@sabaki/sgf/-/sgf-3.4.1.tgz#2a60f3521c4eb6f669116a07a1a9b248936962b6"
-  integrity sha512-mWRqzkDW5G7iLo9Mmw98KDrKw9jWx2ZBY4sHd2acMJf6batfOMjKgq1BuVI2ytipC1gW43N0wd18ZMqzH4lW0A==
+"@sabaki/sgf@^3.4.2":
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/@sabaki/sgf/-/sgf-3.4.7.tgz#aacc27e788afe052c20034b971bae7014c733dd2"
+  integrity sha512-513CQMEejYVqaIKWK+P3AL1TXv2cqdUVOI+3mJDGcDEw5fWlz8puEYn+aQrGjnxJrn5XUUX0fefndEJbam65Sw==
+  dependencies:
+    doken "^1.0.0"
   optionalDependencies:
     iconv-lite "0.4.x"
     jschardet ">=1.0 <3"
@@ -2797,6 +2799,11 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
+doken@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/doken/-/doken-1.0.2.tgz#adeca11e1c5d507687f6c8ce97bfaac3c45e1390"
+  integrity sha512-JSVsMxaB5yikb6wBDQTGIcyNyUytrYQE7WGyGAC0EoFunUTV7Wag4p5JC2bXKuTfD7t847dy7TWcwyETUbYAiw==
+
 dom-converter@^0.2:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
@@ -3330,9 +3337,9 @@ faye-websocket@~0.11.1:
     websocket-driver ">=0.5.1"
 
 figgy-pudding@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
-  integrity sha512-vNKxJHTEKNThjfrdJwHc7brvM6eVevuO5nTj6ez8ZQ1qbXTvGthucRF7S4vf2cr71QVnT70V34v0S1DyQsti0w==
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
+  integrity sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==
 
 file-loader@^4.1.0:
   version "4.3.0"
@@ -7423,9 +7430,9 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
