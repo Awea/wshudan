@@ -797,10 +797,12 @@
   resolved "https://registry.yarnpkg.com/@sabaki/immutable-gametree/-/immutable-gametree-1.8.2.tgz#cfb4d6df63fc5e2b6e093104d6ff824bc1efd5e9"
   integrity sha512-ZABi5kY8XqjEAAVHr23C/CAg2sg/QqcVea/zo0MdWadkIprIhS6eXw0tZhW7DMjcn5M4ONzlelzxY4RXzpGCjQ==
 
-"@sabaki/sgf@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@sabaki/sgf/-/sgf-3.4.1.tgz#2a60f3521c4eb6f669116a07a1a9b248936962b6"
-  integrity sha512-mWRqzkDW5G7iLo9Mmw98KDrKw9jWx2ZBY4sHd2acMJf6batfOMjKgq1BuVI2ytipC1gW43N0wd18ZMqzH4lW0A==
+"@sabaki/sgf@^3.4.2":
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/@sabaki/sgf/-/sgf-3.4.7.tgz#aacc27e788afe052c20034b971bae7014c733dd2"
+  integrity sha512-513CQMEejYVqaIKWK+P3AL1TXv2cqdUVOI+3mJDGcDEw5fWlz8puEYn+aQrGjnxJrn5XUUX0fefndEJbam65Sw==
+  dependencies:
+    doken "^1.0.0"
   optionalDependencies:
     iconv-lite "0.4.x"
     jschardet ">=1.0 <3"
@@ -2796,6 +2798,11 @@ dns-txt@^2.0.2:
   integrity sha1-uR2Ab10nGI5Ks+fRB9iBocxGQrY=
   dependencies:
     buffer-indexof "^1.0.0"
+
+doken@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/doken/-/doken-1.0.2.tgz#adeca11e1c5d507687f6c8ce97bfaac3c45e1390"
+  integrity sha512-JSVsMxaB5yikb6wBDQTGIcyNyUytrYQE7WGyGAC0EoFunUTV7Wag4p5JC2bXKuTfD7t847dy7TWcwyETUbYAiw==
 
 dom-converter@^0.2:
   version "0.2.0"
@@ -4826,9 +4833,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.5:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.2.0:
   version "2.2.0"
